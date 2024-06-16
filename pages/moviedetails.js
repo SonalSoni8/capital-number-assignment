@@ -20,10 +20,10 @@ function MovieDetails() {
     return (
         <div className="container mx-auto p-4 mt-16 px-5 xl:px-20 ">
             <div className='relative mb-32'>
-                <div className='h-40 md:h-96 overflow-hidden justify-center items-center flex rounded-3xl w-full'>
+                <div className='h-40 md:h-96 overflow-hidden justify-center items-center flex rounded-3xl w-full bg-gradient-to-r from-cyan-300 to-blue-300'>
                     <Image src={movie.Poster} height={5000} width={5000}
-                        priority={true} alt='poster'
-                        className='object-cover w-full' />
+                        priority={true} alt='poster' 
+                        className='object-cover w-full mix-blend-multiply contrast-50' />
                 </div>
                 <div className='absolute overflow-hidden bg-[#1E273D]/90 rounded-2xl px-4 md:px-9 py-2 md:py-6 top-28 md:top-80 left-0 md:left-20 w-full md:w-96 backdrop-blur-sm'>
                     <p className='text-[#7E7EB0] capitalize text-base'>MaileHereko / {movie.Type}</p>

@@ -27,6 +27,7 @@ function LandingPage() {
       setMovies([]);
     }
   }, []);
+  console.log(movies)
 
   useEffect(() => {
     fetchMovies();
@@ -54,7 +55,7 @@ function LandingPage() {
 
   const handleMovieClick = (movie) => {
     router.push({
-      pathname: `/MovieDetails`,
+      pathname: `/moviedetails`,
       query: {...movie },
     });
   };
@@ -124,14 +125,14 @@ function LandingPage() {
             key={movie.imdbID}
             onClick={() => handleMovieClick(movie)}
           >
-            <div className="block bg-[#29293B]/40 p-2 rounded-xl h-[530px] hover:shadow-lg">
+            <div className="block bg-[#29293B]/40 p-2 rounded-xl h-auto hover:shadow-lg">
               {movie.Poster !== 'N/A' && (
                 <div className="relative ">
                   <Image height={500} width={500}
                     src={movie.Poster}
                     alt={movie.Title}
                     priority={true}
-                    className="w-auto object-center"
+                    className="w-full object-center"
                   />
                   <div className="text-[#EEA626] absolute top-2 left-2 bg-black/50 text-xs px-2 py-1 rounded-full flex justify-center items-center gap-2">
                     <svg
